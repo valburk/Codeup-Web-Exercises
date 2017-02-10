@@ -1,0 +1,52 @@
+#bigbox {
+	border:1px;
+	width:316px;
+	height:255px;}
+
+.box {
+	border:1px solid black;
+	width:50px;
+	height:50px;
+	padding:10px;
+	margin-top:50px;
+	margin-right:50px;
+	float: left;
+	position: relative;
+	color: #FFF;
+	font-weight: bold; 
+}
+.box>img{
+	position: absolute;
+	bottom: 50px;
+	right: -40px;
+}
+
+#box-red {
+	background-color: red;
+}	
+
+#box-orange {
+	
+	background-color: orange;
+}
+
+#box-yellow {
+	background-color: yellow;
+
+
+}
+
+#box-green {
+	background-color: green;
+	clear: left;
+}
+
+#box-blue {
+	background-color: blue;
+
+}
+
+#box-purple{
+	background-color: purple;
+
+}

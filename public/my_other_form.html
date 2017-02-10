@@ -1,0 +1,53 @@
+<?php
+  var_dump($_GET);
+  var_dump($_POST);
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Pizza Order </title>
+         <link rel="stylesheet" href="CSS/pizza.css">
+    </head>
+    
+    <body>
+      <main>  
+      <h1>Girl order some good ass pizza</h1>
+            <form action="form.php" method="POST">
+            <p> We gotta special deal goin on dis week!</p>
+            <img src="img/image.jpg">
+            <h3>U wanna get it?? </h3>
+            <label><input type="radio" name="special" value="yee"> Yee </label>
+            <label><input type="radio" name="special" value="nah bro"> Nah man </label>
+            
+            <hr>
+
+        <h3>Aye what kinda crust u want?</h3>
+            <label><input type="radio" name="crust" value="Thin"> Thin</label>
+            <label><input type="radio" name="crust" value="HT"> Hand Tossed</label>
+            <label><input type="radio" name="crust" value="austin">Deep Dish </label>
+            <label> <input type="radio" name="crust" value="CB">Bread</label>
+            
+            <hr>
+        <h4>Girl what toppings u like???</h4>
+            <label><input type="checkbox" id="topping" name="toppings" value="linux"> Cheezeeee</label>
+            <label><input type="checkbox" id="topping2" name="toppings" value="osx">Pepperoniz</label>
+            <br>
+            <label><input type="checkbox" id="topping3" name="toppings" value="windows"> Pineapple</label>
+            <label><input type="checkbox" id="topping 4" name="toppings" value="windows"> also Pineapple</label>
+             <label><input type="checkbox" id="topping5" name="toppings" value="veggies">Some veggies r soemthing </label>
+            <hr>
+        <p>
+           
+            <label for="password"> What's the pizza password </label>
+            <input type="password" name="password" id="password" placeholder="put it here ok?" required>
+        </p>
+        <p>
+         <textarea id="email_body" name="email_body" rows="5" cols="40"> any special requests?? ;) </textarea>
+         </p>
+
+            <button type="submit">click right here for dat pizza girl</button>
+
+        </form>
+        </main>
+    </body>
+    </html>
