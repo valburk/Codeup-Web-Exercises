@@ -1,11 +1,12 @@
-// "use strict";
 
-// var myNameIs = 'Val'; // TODO: Fill in your name here.
+(function () {
+"use strict";
+var myNameIs = 'Val'; // TODO: Fill in your name here.
 
-// // TODO:
-// function sayHello(name) {
-// 	console.log(" Hello " + name)
-// }
+// TODO:
+function sayHello(name) {
+	console.log(" Hello " + name)
+}
 
 // // Create a function called 'sayHello' that takes a parameter 'name'.
 // // When called, the function should log a message that says hello from the passed in name.
@@ -23,27 +24,27 @@
 // // // The log should tell the number passed in and whether it is odd or not.
 // // function isOdd (random){
 	
-// // 	var remainder = input % 2;
-// //     if (remainder !=== 0) {
-// //         return true;
-// //     } else {
-// //         return false;
-// //     }
-// // }
-
-// // }
-// function isOdd(number) {
-//     var remainder = number % 2;
-//     if (remainder === 0) {
-// 		return false;
-		
-//     } else {
+// 	var remainder = input % 2;
+//     if (remainder !=== 0) {
 //         return true;
-       
-//    } 
-// // var message = (number % 2 == 0) ? number +"is even" : number + " Is odd";
-// // console.log(message)
+//     } else {
+//         return false;
+//     }
 // }
+
+// }
+function isOdd(number) {
+    var remainder = number % 2;
+    if (remainder === 0) {
+		return false;
+		
+    } else {
+        return true;
+       
+   } 
+var message = (number % 2 == 0) ? number +"is even" : number + " Is odd";
+console.log(message)
+}
 // if (isOdd(random)) {
 // 	console.log(random + " is odd");
 // } else {
@@ -53,28 +54,27 @@
 // // TODO: Call the function 'isOdd' passing the variable 'random' as a parameter.
 
 
-
+})();
 //  EXTRA EXERCISE
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-function log(input) {
-	console.log(input)
-}
-var result = log("cool");
-console.log(result);
+// function log(input) {
+// 	console.log(input)
+// }
+// var result = log("cool");
+// console.log(result);
 
-// typed in result and it gave me undefined
-
-
-function identity(input) {
-	return input
-}
+// // typed in result and it gave me undefined
 
 
-console.log(indentity("heller");)
+// function identity(input) {
+// 	return input;
+// }
+// resuly= indentity("heller")
+// console.log(result);
 
-function getRandomInbetween(min,max)
+// function getRandomInbetween(min,max)
 
 
-
+// function  isNumeric
