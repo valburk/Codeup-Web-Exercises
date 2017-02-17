@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>External JS</title>
+	</head>
+	<body>
+    	<script>
+    	 'use strict';
+
+// todo:
+// Create an array of objects that represent books.
+var books = [
+    {
+        "Book #"; "1",
+        "Title": "Harry Potter and the Chamber of Secrets",
+        "Author": {
+            "firstName": "J.K.",
+            "lastName": "Rowling"
+        }
+    },
+    {
+            "Book #": "2",
+            "Title": "To Kill a Mockingbird",
+            "Author": {
+                "firstName": "Harper",
+                "lastName": "Lee"
+            }
+        },
+        {
+        	"Book #": "3",
+            "Title": "Twilight",
+            "Author": {
+                "firstName": "Stephanie",
+                "lastName": "Lee"
+            }
+        },
+        {
+            "Book #": "4",
+            "Title": "Harry Potter and The Goblet of Fire",
+            "Author": {
+                "firstName": "J.K.",
+                "lastName": "Rowling"
+            }
+        },
+    ];
+// Each book should have a title and an author.
+// The book author should be an object with a firstName and lastName.
+// Be creative and add at least 5 books to the array
+
+
+// log out the books array
+console.log(books);
+
+// todo:
+// Loop through the array of books using .forEach and print out the specified information about each one.
+// start loop here
+books.forEach(function (element, index, array){ 
+
+    console.log("Book #" + index );
+    console.log("Title: " + element.Title);
+    console.log("Author: " + element.Author.firstName + " " + element.Author.lastName);
+    console.log("---");
+});
+</script>
+	</body>
+</html>
