@@ -3,50 +3,311 @@
 	width:316px;
 	height:255px;}
 
-.box {
-	border:1px solid black;
-	width:50px;
-	height:50px;
+.resultboxL { 
+	border: 0px solid gray;
+	width:115px;
+	height:110px;
 	padding:10px;
-	margin-top:50px;
-	margin-right:50px;
+	padding-top:40px;
+	padding-left:25px;
+	margin-top:0px;
+	margin-right:0px;
+	margin-bottom:3px;
+	float: left;
+	position: relative;
+	color: #723D46;
+	background-color: #E7CFCD;
+	font-family: 'Titillium Web';
+	font-size: 60px;
+	border-top-left-radius:40px;
+	}
+
+
+.resultboxR { 
+	border: 0px solid gray;
+	width:115px;
+	height:110px;
+	padding:10px;
+	padding-top:40px;
+	padding-left: 25px;
+	margin-top:0px;
+	margin-right:0px;
+	margin-bottom:3px;
+	float: left;
+	position: relative;
+	color: #723D46;
+	background-color: #E7CFCD;
+	font-family: 'Titillium Web';
+	font-size:60px;
+	border-top-right-radius:40px;
+	}
+
+	.middle {
+	border: 0px solid gray;
+	width:78px;
+	height:132px;
+	padding:10px;
+	padding-top:18px;
+	padding-left:14px;
+	margin-top:0px;
+	margin-right:0px;
+	margin-bottom:3px;
+	float: left;
+	position: relative;
+	color: #723D46; 
+	background-color: #E7CFCD;
+	font-family: 'Titillium Web';
+	font-size: 80px;
+	}
+
+.box {
+	border: 0px solid gray;
+	width:100px;
+	height:100px;
+	padding:10px;
+	margin-top:0px;
+	margin-right:0px;
+	float: left;
+	position: relative;
+	color: #FFF;
+	font-weight: bold;
+	font-family: 'Titillium Web'; 
+	text-align: center;
+	font-size: 37px
+
+}
+
+
+#box-one {
+	background-color: #C38D94;
+	clear: left;
+}	
+#box-one:hover {
+    background-color: #996869; 
+}
+#box-one:active {
+    background-color: #E7CFCD;
+}
+
+
+
+
+#box-two {
+	
+	background-color: #C38D94;
+}
+#box-two:hover {
+    background-color: #996869; 
+}
+#box-two:active {
+    background-color: #E7CFCD;
+}
+
+
+
+
+#box-three {
+	background-color: #C38D94;
+}
+#box-three:hover {
+    background-color: #996869; 
+}#box-three:active {
+    background-color: #E7CFCD;
+}
+
+
+
+
+#box-four {
+	background-color: #C38D94;
+	clear: left;
+}
+#box-four:hover {
+    background-color: #996869; 
+}
+#box-four:hover {
+    background-color: #996869; 
+}
+
+
+
+
+
+#box-five {
+	background-color: #C38D94;
+}
+#box-five:hover {
+    background-color: #996869; 
+}
+#box-five:active {
+    background-color: #E7CFCD;
+}
+
+
+
+
+
+#box-six{
+	background-color: #C38D94;
+}
+#box-six:hover {
+    background-color: #996869; 
+}
+#box-six:active {
+    background-color: #E7CFCD;
+}
+
+
+
+
+#box-seven {
+	background-color: #C38D94;
+	clear: left;
+}
+#box-seven:hover {
+    background-color: #996869; 
+}
+#box-seven:active {
+    background-color: #E7CFCD;
+}
+
+
+
+
+
+#box-eight {
+	background-color: #C38D94;	
+}
+#box-eight:hover {
+    background-color: #996869; 
+}
+#box-eight:active {
+    background-color: #E7CFCD;
+}
+
+
+
+
+
+#box-nine {
+	background-color: #C38D94;
+}
+#box-nine:hover {
+    background-color: #996869; 
+}
+#box-nine:active {
+    background-color: #E7CFCD;
+}
+
+
+
+
+
+#box-zero {
+	background-color: #C38D94;
+}
+#box-zero:hover {
+    background-color: #996869; 
+}
+#box-zero:active {
+    background-color: #E7CFCD;
+}
+
+
+
+
+
+#box-clear {
+	background-color: #C38D94;
+	clear: left;
+}
+#box-clear:hover {
+    background-color: #996869; 
+}
+#box-clear:active {
+    background-color: #E7CFCD;
+}
+
+
+
+
+
+#box-deci {
+	background-color: #C38D94;
+}
+#box-deci:hover {
+    background-color: #996869; 
+}
+#box-deci:active {
+    background-color: #E7CFCD;
+}
+
+
+
+
+
+#plus-box {
+	margin-left: 2px;
+	background-color: #723D46
+}
+#plus-box:hover {
+    background-color: #996869; 
+}
+
+
+
+#minus-box {
+	margin-left: 2px;
+	background-color: #723D46
+}
+#minus-box:hover {
+    background-color: #996869; 
+}
+
+
+
+
+#divide-box {
+	margin-left: 2px;
+	background-color: #723D46
+}
+#divide-box:hover {
+    background-color: #996869; 
+}
+
+
+
+
+
+#mult-box {
+	margin-left: 2px;
+	background-color: #723D46
+}
+#mult-box:hover {
+    background-color: #996869; 
+}
+
+
+
+
+.equalsbox {
+	border: 0px solid gray;
+	width:402px;
+	height:100px;
+	padding:10px;
+	margin-top:3px;
 	float: left;
 	position: relative;
 	color: #FFF;
 	font-weight: bold; 
-}
-.box>img{
-	position: absolute;
-	bottom: 50px;
-	right: -40px;
-}
-
-#box-red {
-	background-color: red;
-}	
-
-#box-orange {
-	
-	background-color: orange;
-}
-
-#box-yellow {
-	background-color: yellow;
-
-
-}
-
-#box-green {
-	background-color: green;
+	background-color: #A76571;
 	clear: left;
+	font-size: 40px;
+	text-align: center;
+	border-bottom-right-radius:50px;
+	border-bottom-left-radius:50px;
 }
 
-#box-blue {
-	background-color: blue;
-
-}
-
-#box-purple{
-	background-color: purple;
-
+#equals:hover {
+    background-color: #582630; 
 }
