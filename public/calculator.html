@@ -252,9 +252,9 @@
         	 	leftDisplay.innerText=result
         	 	operator.innerText=""
         	 }else if (operator.innerText == "-"){
-        	 	var result1 = parseInt(leftDisplay.innerText) - parseInt(rightDisplay.innerText);
+        	 	var result = parseInt(leftDisplay.innerText) - parseInt(rightDisplay.innerText);
         	 	rightDisplay.innerText = ""
-        	 	leftDisplay.innerText= result1
+        	 	leftDisplay.innerText= result
         	 	operator.innerText=""      		
         	}else if (operator.innerText == "x"){
         	 	var result = (parseInt(leftDisplay.innerText) * parseInt(rightDisplay.innerText));
@@ -265,7 +265,7 @@
         	}else if (operator.innerText == "/"){
         	 	var result = (parseInt(leftDisplay.innerText) / parseInt(rightDisplay.innerText));
         	 	rightDisplay.innerText = ""
-        	 	leftDisplay.innerText= "result"
+        	 	leftDisplay.innerText= result
         	 	operator.innerText=""
         	 }
         };

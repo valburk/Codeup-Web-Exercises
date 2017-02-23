@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        #map-canvas {
+            width: 770px;
+            height: 481px;
+        }
+    </style>
+</head>
+<body>
+    <!-- div to hold map -->
+    <div id="map-canvas"></div>
+
+    <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrSWp5w_WsX2L1DJ4FEw8rGD1RJ5yC9Rs"></script>
+
+    <!-- Script to show address on map -->
+    <script type="text/javascript">
+    (function() {
+        "use strict";
+        var address = "1255 NE Interstate 410 Loop, San Antonio, TX 78209";
+
+		var geocoder = new google.maps.Geocoder();
+
+// Geocode our address
+		geocoder.geocode({ "address": address }, function(results, status) {
+   if (status == google.maps.GeocoderStatus.OK) {
+       map.setCenter(results[0].geometry.location);
+   } else {
+       alert("Geocoding was not successful - STATUS: " + status);
+   }
+   });
+
+        
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 19,
+        };
+
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    })();
+    </script>
+</body>

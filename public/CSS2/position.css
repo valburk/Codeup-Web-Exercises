@@ -238,7 +238,7 @@
 #box-deci:hover {
     background-color: #996869; 
 }
-#box-deci:active {
+#box-deci~:active {
     background-color: #E7CFCD;
 }
 
