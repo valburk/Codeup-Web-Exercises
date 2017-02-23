@@ -36,12 +36,45 @@
  //            $('h1').css('background-color', 'yellow');
  //        });
 
- $(document).ready(function() {
-            $('*').css('border', ' 1px solid black');
-        });
+ // $(document).ready(function() {
+ //            $('*').css('border', ' 1px solid black');
+ //        });
        // $(document).ready(function() {
        //      $('.codeup').css('border', '1px solid black');
        //  });
+
+ // $(document).ready(function() {
+ //            $('#confusedHeader').hover(function() {
+ //                $('li').css('background-color', 'red');
+ //            });
+ //        });
+
+
+
+
+ $(document).ready(function() {
+            $('li').hover(
+                function() {
+                    $(this).css('background-color', 'red');
+                },
+                function() {
+                    $(this).css('background-color', '#FFF');
+                }
+            );
+        });
+
+
+ $(document).ready(function() {
+            $('#confusedHeader').click(function() {
+                $('h1').css('background-color', 'yellow');
+            });
+        });
+
+ $(document).ready(function() {
+            $('#confusedP').dblclick(function() {
+                $('p').css('font-size', '18px');
+            });
+        });
  </script>
 
 <h1 id= "confusedHeader" class="codeup">Super Confused rn</h1>
