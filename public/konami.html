@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>konami </title>
+</head>
+<body>
+<script
+  src="http://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+    // $(document).keyup(function(event){
+    //         console.log(event.keyCode);
+    //     });
+
+
+
+    // $('#typing').keydown( function(key){
+    //     console.log(key.keyCode + "was pressed");
+    //   });
+
+
+if ( window.addEventListener ) {  
+  var typing = 0, konami = [38,38,40,40,37,39,37,39,66,65];  
+  window.addEventListener("keydown", function(keyzz) {  
+    if ( keyzz.keyCode == konami[typing] ) typing++;  
+    else typing = 0;  
+    if ( typing == 10 )  
+     console.log("done"); 
+    }, true);  
+}  
+</script>
+<input id="typing" type="text">
+</body>
+</html>

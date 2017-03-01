@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS2/weather.css">
+</head>
+<body>
+
+<h1 id='title'>Weather</h1>
+<div id='subtitle'>3-Day Forecast</div>
+<div> Change Location: <input type="Finder" name="Finder"> <button> GO </button></div>
+<div class="row" id='content'></div>
+<div id="map-canvas"></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaF6fytBndS-o-bLq5ynypHUQ6Efx-I7E"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+<script>
+(function() {
+        "use strict";
+
+var APPID = "7f8e3aa0aad113510e0c1eaafd1c17b8"
+var url ="http://api.openweathermap.org/data/2.5/forecast/daily";
+
+function getWeather(){
+    $.get(url, {
+        APPID: APPID,
+        q: "San Antonio",
+        cnt: 3,
+        units: "imperial"
+    }).fail(function(data, status) {
+        alert("failed to load " + status);
+    }).done(function(data){
+        console.log(data);
+        // // console.log the humidity of the 2nd day
+        // console.log(data.list[1].humidity);
+        // // console.log the humidity of all the days (maybe use .forEach?)
+        // console.log(data.list[2].humidity);
+        // console.log(data.list[0].humidity);
+
+
+        // // console.log the temprature of the 3rd day in celsius
+        // console.log(data.list[2].temp.day - 32);
+
+        // // console.log the temprature of the 3rd day in fahrenheit
+        //  console.log(data.list[2].temp.day);
+        // // console.log all types of information you will ultimately display for a single day in the 3-day forcast div
+
+        // //DAY 1
+        //  console.log(data.list[0].temp.day);
+        //  console.log(data.list[0].temp.night);
+        //  console.log(data.list[0].clouds);
+        //  console.log(data.list[0].humidity);
+        //  console.log(data.list[0].speed);
+        //  console.log(data.list[0].pressure);
+
+
+        // console.log all type of information you will ultimately display for all days in the 3-day forcast divs
+showData(data);
+    });
+}
+getWeather();
+
+function showData(days){
+    days.list.forEach(function(day, index) {
+        var htmlString = ""; 
+        htmlString += "<div id=section class='col-xs-4'>"
+        htmlString += "<div id='allDay'>" + "Day: " + (parseInt(index) + 1) + "</div>";
+        htmlString += "<div id='allTemp'>" + Math.round(day.temp.night) + "°" + "/"  + Math.round(day.temp.day) + "°" + "</div>"
+        htmlString += "<div id='allHumidity'>" + "Humidity: " + day.humidity + "%" + "</div>";
+        htmlString += "<div id='allClouds'>" + "Clouds: " + day.clouds + "%" + "</div>";
+        htmlString += "<div id='allWind'>" + "Wind: " + Math.round(day.speed) + "</div>";
+        htmlString += "<div id='allWind'>" + "Pressure: " + Math.round(day.pressure) + "</div>";
+        htmlString += "<img src='http://openweathermap.org/img/w/" + day.weather[0].icon + ".png'";
+        // htmlString += "<div id='allTemp'>" + day.temp.day + "</p>";
+        // htmlString += "<p id='entry'>" + post.content + "</p>";
+        // htmlString += "<p id='categ'> Category: " + "<button>" + post.categories.join( "</button><button>") + "</p>";
+        // // htmlString += "<td>" + tool.categories + "</td>";
+       
+     htmlString += "</div>";
+
+        $("#content").append(htmlString); 
+    });
+
+};
+
+ 
+        var address = "1255 NE Interstate 410 Loop, San Antonio, TX 78209";
+
+        var geocoder = new google.maps.Geocoder();
+
+// Geocode our address
+        geocoder.geocode({ "address": address }, function(results, status) {
+   if (status == google.maps.GeocoderStatus.OK) {
+       map.setCenter(results[0].geometry.location);
+       var marker = new google.maps.Marker(
+    {
+        position: results[0].geometry.location,
+        map: map,
+        draggable: true
+
+
+    });
+   } else {
+       alert("Geocoding was not successful - STATUS: " + status);
+   }
+   });
+
+        
+        var mapOptions = {
+            draggable: false,
+            // Set the zoom level
+            zoom: 4,
+        };
+
+
+        // Render the map
+        var weatherLocation = geocoder.position
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+      
+
+
+// $.get("http://api.openweathermap.org/data/2.5/weather", {
+//     APPID: "950b816f43b7af669d2fdb9f0682e22a",
+//     q:     "San Antonio, TX"
+// });
+})();
+</script>
