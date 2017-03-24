@@ -29,7 +29,7 @@ function showData(blogPosts){
         htmlString += "<p id='postTitle'>" + post.title + "</p>";
         htmlString += "<p id='Pdate'>" + post.date + "</p>";
         htmlString += "<p id='entry'>" + post.content + "</p>";
-        htmlString += "<p id='categ'> Category: " + "<button>" + post.categories.join( "</button><button>") + "</p>";
+        htmlString += "<p id='categ'> Category: " + post.categories.join( ", ") + "</p>";
         // htmlString += "<td>" + tool.categories + "</td>";
         htmlString += "</p> </div>";
 

@@ -8,14 +8,16 @@
     IN EXCHANGE JUST GIVE US CREDITS AND TELL YOUR FRIENDS ABOUT US
    
     ========================================================  */
+/*
+DESKTOP  VERSION
 
 
-
+*/
 /*=======================================
     GENERAL STYLES
 ==================================================*/
 body {
-           font-family: 'Ruluko', sans-serif;
+    font-family: 'Ruluko', sans-serif;
     font-size:14px;
 }
 
@@ -38,7 +40,9 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     line-height:120px;
     text-transform:uppercase;
-     color: #83696B;
+     color: #474747;
+     font-size: 40px;
+     font-weight: bold;
 }
 h3 {
     line-height:30px;
@@ -96,7 +100,7 @@ section {
    background-color:#B2BAC2!important;
 }
 .main-color-red {
-    color: #69494b;
+    color: #68969C;
 }
 /*=======================================
     HEADER STYLES
@@ -137,8 +141,9 @@ nav {
 }
 
 .navbar-inverse {
-background-color: #9F8082;
-border-color: #9F8082;
+opacity: .9;
+background-color: #7FB7BE;
+border-color: #68969C;
 }
 
 /*=======================================
@@ -153,7 +158,22 @@ box-shadow: none;
 border: 0;
 padding: 50px 20px 30px 20px;
 margin-bottom:20px;
+
+
+
+    -webkit-transition: all 0.2s ease;
+       -moz-transition: all 0.2s ease;
+         -o-transition: all 0.2s ease;
+            transition: all 0.2s ease;
 }
+.about-div:hover {
+          -webkit-transform: scale(1.1);
+       -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+         -o-transform: scale(1.1);
+            transform: scale(1.1);
+}
+
 #Parallax-one {
     background-image: url("../img/2.jpg");
 padding: 0;

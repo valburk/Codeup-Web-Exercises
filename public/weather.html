@@ -4,12 +4,14 @@
     <title>Weather</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="CSS2/weather.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
 </head>
 <body>
 
 <h1 id='title'>Weather</h1>
 <div id='subtitle'>3-Day Forecast</div>
-<div> Change Location: <input type="Finder" name="Finder"> <button> GO </button></div>
+<div> Change Location: </div> 
+<input type="text" id="location" placeholder= "San Antonio" name="Finder"> <button id='goButton'> GO </button>
 <div class="row" id='content'></div>
 <div id="map-canvas"></div>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaF6fytBndS-o-bLq5ynypHUQ6Efx-I7E"></script>
@@ -22,11 +24,35 @@
 
 var APPID = "7f8e3aa0aad113510e0c1eaafd1c17b8"
 var url ="http://api.openweathermap.org/data/2.5/forecast/daily";
+var urlL ="api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}";
 
-function getWeather(){
+
+// function getDragWeather(lattitude, longitude){
+//     $.get(url, {
+//         APPID: APPID,
+//         lat: latt
+//         lon: long
+//         cnt: 3,
+//         units: "imperial"
+//     }).fail(function(data, status) {
+//         alert("failed to load " + status);
+//     }).done(function(data){
+//         console.log(data);
+// showData(data);
+//     });
+// }
+
+
+// ^^^ this is where I was trying to get the weather to get the info from wherever the marker was. 
+
+
+
+
+
+function getWeather(location){
     $.get(url, {
         APPID: APPID,
-        q: "San Antonio",
+        q: location,
         cnt: 3,
         units: "imperial"
     }).fail(function(data, status) {
@@ -60,7 +86,7 @@ function getWeather(){
 showData(data);
     });
 }
-getWeather();
+getWeather("San Antonio");
 
 function showData(days){
     days.list.forEach(function(day, index) {
@@ -72,7 +98,7 @@ function showData(days){
         htmlString += "<div id='allClouds'>" + "Clouds: " + day.clouds + "%" + "</div>";
         htmlString += "<div id='allWind'>" + "Wind: " + Math.round(day.speed) + "</div>";
         htmlString += "<div id='allWind'>" + "Pressure: " + Math.round(day.pressure) + "</div>";
-        htmlString += "<img src='http://openweathermap.org/img/w/" + day.weather[0].icon + ".png'";
+        htmlString += "<img id='pics' src='http://openweathermap.org/img/w/" + day.weather[0].icon + ".png'";
         // htmlString += "<div id='allTemp'>" + day.temp.day + "</p>";
         // htmlString += "<p id='entry'>" + post.content + "</p>";
         // htmlString += "<p id='categ'> Category: " + "<button>" + post.categories.join( "</button><button>") + "</p>";
@@ -102,6 +128,19 @@ function showData(days){
 
 
     });
+marker.addListener('dragend', function() {
+    console.log("marker dragged")
+    console.log(marker.getPosition().lat());
+    console.log(marker.getPosition().lng());
+  var lat = marker.getPosition().lat();
+  var lon = marker.getPosition().lng();
+
+getDragWeather(lat,lon)
+  });
+
+
+
+
    } else {
        alert("Geocoding was not successful - STATUS: " + status);
    }
@@ -109,7 +148,7 @@ function showData(days){
 
         
         var mapOptions = {
-            draggable: false,
+            draggable: true,
             // Set the zoom level
             zoom: 4,
         };
@@ -118,12 +157,21 @@ function showData(days){
         // Render the map
         var weatherLocation = geocoder.position
         var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    
       
 
+$("#goButton").click(function(){
+    var location = $("#location").val();
+    $('#content').html("")
+    getWeather(location);
+})
 
+// getDragWeather();
 // $.get("http://api.openweathermap.org/data/2.5/weather", {
 //     APPID: "950b816f43b7af669d2fdb9f0682e22a",
 //     q:     "San Antonio, TX"
 // });
 })();
 </script>
+</body>
+<
