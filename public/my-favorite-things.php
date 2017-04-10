@@ -7,13 +7,13 @@ $favs = [ 'cats', 'boys', 'chinese food', 'netflix', 'driving' ];
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Codeup!</title>
+    <title>Codeup</title>
 </head>
 <body>
-    <?php foreach ($favs as $fav) { ?>
+    <?php foreach ($favs as $fav): ?>
 
-        <li> <?php echo $fav; ?> </li>
-    <?php } ?>
+        <li> <?=  $fav; ?> </li>
+    <?php endforeach; ?>
 </h1>
 </body>
 </html>

@@ -14,11 +14,11 @@ echo "$nouns[0] ";
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Server Name Generator</title>
+    <title>Server Name Generator!</title>
 </head>
 <body>
 <h1> Server Name: </h1>
-    <h3><?php echo generate($nouns, $adjectives);
+    <h3><?= generate($nouns, $adjectives);
 
  ?>
 
